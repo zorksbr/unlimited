@@ -9,36 +9,83 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #0f0f0f;
             margin: 0;
             padding: 20px;
         }
+        h2 {
+            color: #ffffff;
+        }
+        span {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 0 10px;
+        }
         img {
-            width: 100%;
-            max-width: 100%;
+            width: 90%;
+            max-width: 600px;
             height: auto;
             display: block;
-            margin-bottom: 0 auto 20px auto;
+            margin: 20px auto;
         }
-
+        button {
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <img src="capa.png" alt="capa">
-    <img src="1.png" alt="pagina 1">
-    <img src="2.png" alt="pagina 2">
-    <img src="3.png" alt="pagina 3">
-    <img src="4.png" alt="pagina 4">
-    <img src="5.png" alt="pagina 5">
-    <img src="6.png" alt="pagina 6">
-    <img src="7.png" alt="pagina 7">
-    <img src="8.png" alt="pagina 8">
-    <img src="9.png" alt="pagina 9">
-    <img src="10.png" alt="pagina 10">
-    <img src="11.png" alt="pagina 11">
-    <img src="12.png" alt="pagina 12">
-    <img src="13.png" alt="pagina 13">
-    <img src="14.png" alt="pagina 14">
-    <img src="15.png" alt="pagina 15">
+    <h2>Capítulo 1 - Destinado</h2>
+
+    <img id="pagina" src="capa.png" alt="capa">
+
+    <br>
+
+    <button onclick="anterior()">◀ Anterior</button>
+    <span id="contador">1 /16</span>
+    <button onclick="proxima()">Próxima ▶</button>
+
+    <script>
+        const paginas = [
+            "capa.png",
+            "1.png",
+            "2.png",
+            "3.png",
+            "4.png",
+            "5.png",
+            "6.png",
+            "7.png",
+            "8.png",
+            "9.png",
+            "10.png",
+            "11.png",
+            "12.png",
+            "13.png",
+            "14.png",
+            "15.png"
+        ];
+
+        let atual = 0;
+
+        function atualizar(){
+            document.getElementById("pagina").src = paginas[atual];
+            document.getElementById("contador").innerText = (atual + 1) + " / " + paginas.length;
+        }
+
+        function proxima(){
+            if(atual < paginas.length - 1){
+                atual++;
+                atualizar();
+            }
+        }
+        function anterior(){
+            if(atual > 0){
+                atual--;
+                atualizar();
+            }
+        }
+    </script>
 </body>
 </html>
