@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 2</title>
+    <link rel="icon" type="image/png" href="unlimited.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #0f0f0f;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #ffffff;
+        }
+        span {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        img {
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        button {
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Capítulo 2 - Não são só eles</h2>
 
+    <img id="pagina" src="capa.png" alt="capa">
+
+    <br>
+
+    <button onclick="anterior()">◀ Anterior</button>
+    <span id="contador">1 /16</span>
+    <button onclick="proxima()">Próxima ▶</button>
+
+    <script>
+        const paginas = [
+            "capa.png",
+            "1.png",
+            "2.png",
+            "3.png",
+            "4.png",
+            "5.png",
+            "6.png",
+            "7.png",
+            "8.png",
+            "9.png",
+            "10.png",
+            "11.png",
+        ];
+
+        let atual = 0;
+
+        function atualizar(){
+            document.getElementById("pagina").src = paginas[atual];
+            document.getElementById("contador").innerText = (atual + 1) + " / " + paginas.length;
+        }
+
+        function proxima(){
+            if(atual < paginas.length - 1){
+                atual++;
+                atualizar();
+            }
+        }
+        function anterior(){
+            if(atual > 0){
+                atual--;
+                atualizar();
+            }
+        }
+    </script>
+</body>
+</html>
