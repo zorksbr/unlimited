@@ -13,15 +13,37 @@
             margin: 0;
             padding: 20px;
         }
+        .logo {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .logo {
+                width: 90%;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
     </style>
+</head>
 
 <body>
-    <img src="icons/unlimitedlogo.png" alt="UNLIMITED Logo" width="500">
+    <img class="logo" src="icons/unlimitedlogo.png" alt="UNLIMITED Logo"> 
     <p>bem... aqui é onde vai ta a história do UNLIMITED</p>
-</body>
+
 <br>
 <div>
-    <body>
         <h1>Capítulos</h1>
         <h2>Parte 1- Cursed Lineage</h2>
         <a href="capitulos/cap1/index.html" target="_blank">
@@ -31,10 +53,10 @@
         <a href="capitulos/cap2/index.html" target="_blank">
             Capítulo 2
         </a>
-    </body>
+    
 </div>
 <div>
-    <body>
+    
         <h1>Extras</h1>
         <a href="extras/extra1/index.html" target="_blank">
             Extra 1
