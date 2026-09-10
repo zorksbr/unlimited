@@ -18,6 +18,20 @@
             max-width: 100%;
             height: auto;
         }
+        .botao {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            }
+            .botao:hover {
+                transform: scale(1.05);
+                background-color: #444;
+            }
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -46,11 +60,11 @@
 <div>
         <h1>Capítulos</h1>
         <h2>Parte 1- Cursed Lineage</h2>
-        <a href="capitulos/cap1/index.html" target="_blank">
+        <a class="botao" href="capitulos/cap1/index.html" target="_blank">
             Capítulo 1
         </a>
         <br>
-        <a href="capitulos/cap2/index.html" target="_blank">
+        <a class="botao" href="capitulos/cap2/index.html" target="_blank">
             Capítulo 2
         </a>
     
@@ -58,7 +72,7 @@
 <div>
     
         <h1>Extras</h1>
-        <a href="extras/extra1/index.html" target="_blank">
+        <a class="botao" href="extras/extra1/index.html" target="_blank">
             Extra 1
         </a>
     </body>
